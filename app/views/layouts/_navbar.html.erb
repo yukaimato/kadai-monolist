@@ -36,16 +36,16 @@
                 <li>
                   <a href="#">ログアウト</a>
                 </li>
+                <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+            <%= link_to new_item_path do %>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                アイテムを追加
+            <% end %>
               </ul>
             </li>
           <% else %>
             <li><%= link_to '新規登録', signup_path %></li>
             <li><%= link_to 'ログイン', login_path %></li>
-            <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
-            <%= link_to new_item_path do %>
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                アイテムを追加
-            <% end %>
           <% end %>
         </ul>
       </div>
